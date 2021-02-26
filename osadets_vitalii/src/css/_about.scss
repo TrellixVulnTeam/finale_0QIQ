@@ -1,0 +1,84 @@
+.about {
+    background: $cartBg;
+
+    &__wrapper {
+        max-width: 1200px;
+    }
+    &_center {
+        margin: 0 auto;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+    &__titles {
+        position: relative;
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        &::after {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 3px;
+            bottom: 0;
+            background-color: $menuHover;
+            z-index: 0;
+        }
+    }
+    &__content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__text {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 50px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        color: $blackTextColor;
+        border-bottom: 3px solid $menuHover;
+        padding-bottom: 20px;
+
+        &:hover {
+            z-index: 1;
+            border-bottom: 3px solid #000;
+        }
+    }
+    &__info {
+        padding-top: 70px;
+        display: flex;
+    }
+
+    &__subtitle {
+        font-size: 24px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        max-width: 220px;
+        line-height: 1.5;
+    }
+
+    &__subtext {
+        max-width: 430px;
+        padding-top: 50px;
+        font-size: 18px;
+        letter-spacing: 1px;
+        line-height: 2.3;
+        color: $aboutTextColor;
+    }
+    &__img:first-child {
+        padding-bottom: 20px;
+    }
+}
+
+.tab {
+    display: none;
+}
+
+.tab.is-active {
+    display: flex;
+}
